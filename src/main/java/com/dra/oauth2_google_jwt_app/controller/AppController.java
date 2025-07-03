@@ -10,7 +10,7 @@ public class AppController {
 
     @GetMapping("home")
     public String getSomething() {
-        return "Hello Wourld!";
+        return "Hello World!";
     }
 
 }

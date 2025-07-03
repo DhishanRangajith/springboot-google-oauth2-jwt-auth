@@ -32,7 +32,7 @@ public class WebSecurityConfig {
         httpSecurity
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                                            .requestMatchers("auth/**").permitAll()
+                                            .requestMatchers("api/token/**").permitAll()
                                             .anyRequest().authenticated())
             .addFilterBefore(this.jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
             .oauth2Login(
